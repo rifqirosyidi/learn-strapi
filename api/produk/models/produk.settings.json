@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "produks",
+  "info": {
+    "name": "Produk"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "private": false,
+      "unique": true,
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "harga": {
+      "type": "decimal"
+    },
+    "qty": {
+      "type": "integer"
+    },
+    "kategoris": {
+      "via": "produks",
+      "collection": "kategori"
+    }
+  }
+}
